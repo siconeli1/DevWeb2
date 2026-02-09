@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form-Table</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Início</a>
+    <a href="busca.html">Busca</a>
+    <a href="form-table.html" class="active">Formulário/Tabela</a>
+    <a href="postagem.html">Postagem c/ imagem</a>
+  </div>
+  <div class="main-title">Formulário de cadastro e Tabela com dados</div>
+  <div class="container">
+    <form class="form-box">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" placeholder="" required>
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone" name="telefone" placeholder="(99)99999-9999" required>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.aqui" required>
+      <label for="estado">Estado de residência</label>
+      <select id="estado" name="estado" required>
+        <option value="">[Selecione]</option>
+        <option value="SP">São Paulo</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+      </select>
+      <button type="submit" class="btn-green">Enviar</button>
+      <button type="reset" class="btn-yellow">Limpar</button>
+    </form>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>José da Silva</td>
+          <td>(11) 99785-4871</td>
+          <td>josesilva11@gmail.com</td>
+          <td>Santa Catarina</td>
+        </tr>
+        <tr>
+          <td>Marcos William Freitas</td>
+          <td>(11) 99784-4812</td>
+          <td>mwfreitas@microsoft.com</td>
+          <td>São Paulo</td>
+        </tr>
+        <tr>
+          <td>Ana Luiza dos Reis Barco</td>
+          <td>(14) 81475-4812</td>
+          <td>anareis@microsoft.com</td>
+          <td>São Paulo</td>
+        </tr>
+        <tr>
+          <td>Keila Santanna de Souza</td>
+          <td>(17) 99744-1155</td>
+          <td>keila.satanna@outlook.com</td>
+          <td>São Paulo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
