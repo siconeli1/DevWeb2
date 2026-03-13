@@ -1,0 +1,120 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#212529;
+    background:#ffffff;
+}
+
+.page{
+    width:1100px;
+    margin:40px auto;
+}
+
+h1{
+    font-size:58px;
+    font-weight:500;
+    margin:0 0 16px;
+}
+
+hr{
+    border:0;
+    border-top:1px solid #d6d6d6;
+    margin:0 0 38px;
+}
+
+.menu-links{
+    font-size:34px;
+    line-height:1.9;
+    padding-left:34px;
+}
+
+.menu-links a,
+.links-inline a,
+.back-link{
+    color:#0d6efd;
+    text-decoration:underline;
+}
+
+.form-centralizado{
+    width:520px;
+    margin:0 auto;
+}
+
+.form-linha{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    margin-bottom:16px;
+}
+
+.form-linha label{
+    min-width:120px;
+    text-align:right;
+    font-size:20px;
+}
+
+.form-linha.compacta label{
+    min-width:140px;
+}
+
+.form-linha input,
+.form-linha select{
+    width:240px;
+}
+
+.acoes{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:8px;
+}
+
+.bloco-resultado{
+    margin-top:34px;
+}
+
+.links-inline{
+    display:flex;
+    gap:42px;
+    flex-wrap:wrap;
+    font-size:24px;
+    margin-bottom:34px;
+}
+
+.mensagem-primo{
+    text-align:center;
+    font-size:26px;
+    line-height:2.1;
+    margin-top:40px;
+}
+
+.destaque{
+    display:inline-block;
+    padding:2px 18px;
+    border:3px solid #ff3b30;
+    margin:0 6px;
+}
+
+.sequencia{
+    font-size:28px;
+    line-height:1.8;
+    word-spacing:8px;
+}
+
+.voltar{
+    margin-top:26px;
+}
+
+.tabela-wrap{
+    margin-top:28px;
+}
+
+.tabela-wrap table{
+    width:auto;
+}
+
+.tabela-wrap td{
+    width:72px;
+    height:48px;
+    border:1px solid #444;
+}
