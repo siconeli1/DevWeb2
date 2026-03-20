@@ -15,28 +15,53 @@ function classeMenu(string $paginaMenu, string $paginaAtual): string
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($tituloPagina, ENT_QUOTES, "UTF-8") ?></title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
         .img-lorem {
             width: 30%;
+            min-width: 220px;
         }
 
         .inicio p,
-        .pagina-conteudo p {
+        .pagina-conteudo p,
+        .pagina-destino p {
             text-align: justify;
             text-indent: 3.5em;
+        }
+
+        .pagina-conteudo,
+        .pagina-destino {
+            min-height: 420px;
+        }
+
+        .titulo-pagina {
+            background-color: #f8f9fa;
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
         }
 
         .form-contato textarea {
             min-height: 180px;
             resize: vertical;
         }
+
+        .dados-contato p,
+        .alert p {
+            text-indent: 0;
+        }
+
+        @media (max-width: 767.98px) {
+            .img-lorem {
+                float: none !important;
+                width: 100%;
+                margin: 0 0 1.5rem 0 !important;
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
             <title>Bootstrap</title>
@@ -54,7 +79,7 @@ function classeMenu(string $paginaMenu, string $paginaAtual): string
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="index.php" class="<?= classeMenu("inicio", $paginaAtual) ?>" aria-current="page">Início</a></li>
+                <li class="nav-item"><a href="index.php" class="<?= classeMenu("inicio", $paginaAtual) ?>" aria-current="page">In&iacute;cio</a></li>
                 <li class="nav-item"><a href="sobre.php" class="<?= classeMenu("sobre", $paginaAtual) ?>">Sobre</a></li>
                 <li class="nav-item"><a href="faqs.php" class="<?= classeMenu("faqs", $paginaAtual) ?>">FAQs</a></li>
                 <li class="nav-item"><a href="contato.php" class="<?= classeMenu("contato", $paginaAtual) ?>">Contato</a></li>
