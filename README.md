@@ -27,6 +27,10 @@ As atividades envolvem exercícios práticos, provas práticas e trabalhos ao lo
 Os conteúdos serão organizados por tópicos conforme forem sendo trabalhados em aula.
 
 - `01-revisao-html-css` → atividade prática de revisão.
+- `03-primeiros-passos-php` → atividade introdutória PHP.
+- `04-get-post-operadores` → usando post e operadores.
+- `05-estrutura-de-repetica-arrays-e-jason` → usando arrays e jason.
+- `06-built-in-e-inclusao-de-arquivos` → built-in e inclusao de arquivos.
 
 ---
 
