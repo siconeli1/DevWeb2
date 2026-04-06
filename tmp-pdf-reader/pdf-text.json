@@ -1,0 +1,69 @@
+﻿{
+  "numPages": 16,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "text": "Trabalho T1 – VTPDWE2 & VTPISRV Web 2 e Implantação de Servidores Contador de Acessos publicado no AWS EC2 Data de Entrega: 05/04/2026, Atividade remota referente ao Sábado Letivo do dia 21/03/2026 Forma de entrega: 1) Enviar link do GitHub com os arquivos do trabalho, deixe este repositório PRIVADO, pois se houver plágio ambos ficam com zero, não queremos isso. a. Compartilhar o repositório com o professor, epansani@gmail.com . 2) Enviar o nome da instância (da máquina) que você criou (para que eu possa inicia-la para correção. 3) Enviar a URL do trabalho publicado no EC2 (o IP público da instância na EC2, como visto na disciplina com o Prof. Bira). a. Mesmo que o IP mude quando desliga o laboratório, não tem problema, eu mudo depois na correção. b. Enviar em formato de link! (exemplo http://3.85.189.96/ ) com o http ou https conforme o caso. Dicas importantes: 1. Cuidado com as permissões na instância , será necessário colocar permissão para o “ www-data ” na pasta onde serão gravados os arquivos de log. a. Não use a permissão “777” ! De acordo com o prof Bira é o “ número DO besta ” e você poderá ter consequências indesejáveis em ambas as disciplinas..."
+    },
+    {
+      "pageNumber": 2,
+      "text": "2. Usar Termius SSH para eu poder ajudar se precisarem pedir ajuda, guardem a chave e me enviem; O que deve ser feito: Página inicial Configurar uma página inicial (index.php) na instância EC2 que será exibida ao acessar o IP público do servidor. Ao acessar o IP da sua instância (ex: http://SEU-IP), deve ser exibida uma página semelhante a este modelo: Estrutura da página: A página deve ser dividida em duas partes: Lado esquerdo ▪ Foto do aluno (obrigatória) ▪ Nome completo do aluno"
+    },
+    {
+      "pageNumber": 3,
+      "text": "Lado direito ▪ Título: Links ▪ Dois links: o Praticando Busca CEP (atividade da Aula 7) o Trabalho 1 – Contador de Acessos Elementos adicionais obrigatórios ▪ Um título principal (h1) no topo da página com o texto: “Servidor Web da disciplina de VTPDWE2 2026/01” ▪ Uma linha vertical separando os dois lados da página ▪ Layout organizado e centralizado Contador de Acessos: Em seguida v ocê deverá criar três (3) páginas PHP, algo como “inicio”, “sobre” e “contato”. Você pode fazer outras se quiser. Escolha algum tema, deixe sua criatividade fluir, me surpreenda! Pode usar Bootstrap para estilização se desejar. Todas as páginas deverão ter um menu para navegação entre elas. Alguns exemplos de páginas “inicio”, “sobre” e “contato” podem ser vistos nas Figuras a seguir:"
+    },
+    {
+      "pageNumber": 4,
+      "text": "Em seguida, você deverá implementar usando a linguagem PHP e as funções para manipulação de arquivos da linguagem um contador de acessos em cada uma das páginas . Neste contador de acessos você deverá contabilizar quantas vezes cada uma das páginas PHP foi aberta /visualizada. Deverá ser registrado também registro (log) com cada um dos acessos/visualizações de cada página ,"
+    },
+    {
+      "pageNumber": 5,
+      "text": "a data e hora deste acesso, IP do usuário e o navegador que foi usado para isso. Você deverá criar também uma página para mostrar esses dados, estas estatísticas. Nessa página serão mostradas: 1. A quantidade de acessos de cada uma das páginas criadas; a. Ordenada de forma decrescente (a página com mais acessos deverá ser mostrada em primeiro) 2. A quantidade total de acessos das três páginas 3. Opções para limpar a quantidade de acessos a. De forma individual (para cada página) b. De forma geral (apagar todo o contador de acessos) 4. Uma lista com os registros (logs) de cada um dos acessos, com a. Um contador sequencial b. O nome da página, c. A data e hora do acesso d. O IP do usuário e. O navegador utilizado. 5. Uma opção para limpar o registro (log) 6. Esse contador de acessos deverá ser protegido por uma chave de acesso secreta (obs. Use a chave/senha “ senha_da_nasa ”) 7. Ao inserir essa chave você deverá criar uma sessão para que a página seja mostrada a. Não se esqueça de criar uma opção “Sair” para encerrar a sessão 8. Não se esqueça de tratar erros, como palavra-chave incorreta ou tentativa de acesso indevido (como limpar os logs sem estar devidamente autenticado)."
+    },
+    {
+      "pageNumber": 6,
+      "text": "Veja agora um exemplo da página de Logs de Acesso: Caso você informe uma chave de acesso incorreta mostre uma mensagem:"
+    },
+    {
+      "pageNumber": 7,
+      "text": "Com a chave de acesso correta você terá acesso ao sistema de consulta de Logs Observe que há um botão para sair no menu (que só aparece quando o usuário está autenticado)"
+    },
+    {
+      "pageNumber": 8,
+      "text": "São mostradas as quantidades de acesso:"
+    },
+    {
+      "pageNumber": 9,
+      "text": "Tanto de forma individual quando o total de acessos Note que a página mais acessada sempre aparece em primeiro: É possível limpar o contato de acessos de cada uma das páginas:"
+    },
+    {
+      "pageNumber": 10,
+      "text": "Há uma confirmação:"
+    },
+    {
+      "pageNumber": 11,
+      "text": "Há uma opção para limpar todos os dados de acesso de uma vez: Com confirmação, é claro:"
+    },
+    {
+      "pageNumber": 12,
+      "text": ""
+    },
+    {
+      "pageNumber": 13,
+      "text": "Há ainda a opção de listagem dos registros com todas as informações: Observe os detalhes das informações, Contador, nome da página, data e hora, IP e navegador: Há ainda a opção de limpar os logs:"
+    },
+    {
+      "pageNumber": 14,
+      "text": "Com a devida confirmação:"
+    },
+    {
+      "pageNumber": 15,
+      "text": "IMPORTANTE , não se esqueça de usar a palavra- chave “ senha_da_nasa ” para que eu consiga acessar sua página e corrigir o trabalho. IMPORTANTE #2 , não deverá ser usada nenhuma ferramenta como Google Analytics ou semelhante. Assim como não deve ser usado nenhum banco de dados para persistência dos dados necessários. Vocês deverão utilizar apenas arquivos de texto , para fazer a persistência das informações, porém a estrutura é livre, defina como sua lógica mandar. Vocês deverão publicar o trabalho em uma máquina sua na AWS EC2, assim como foi feito na disciplina de implantação de servidores do prof. Bira. Obs . Eu tenho como iniciar as máquinas para poder corrigir em momento posterior."
+    },
+    {
+      "pageNumber": 16,
+      "text": "Resumo dos requisitos: • Criar 3 páginas para terem controle de acesso, algo como “inicio”, “sobre” e “contato”. Você pode fazer outras se quiser. Escolha algum tema, deixe sua criatividade fluir, me surpreenda! • Criar uma página “Logs de Acesso”, para apresentar os dados de acesso a cada uma das 3 páginas criadas (quantas vezes cada uma foi acessada e a data e hora do acesso); • Você pode usar Bootstrap para estilização se desejar. • Você deverá criar um menu para navegação entre as páginas. • A página “Logs de Acesso” deverá ser protegida por uma chave de acesso secreta (usar “senha_da_nasa” por favor); • Você deverá usar sessões para persistir a autenticação via chave de acesso. • Deverá existir uma opção “Sair” para encerrar a sessão e pedir novamente a chave de acesso para acessar a página de Logs. • A página Logs de Acesso deverá conter duas coisas, um contador de acessos e um registro (log) de cada visualização de página, com data, hora, IP e navegador usado para acessar a página. o Tanto o contador de acessos quanto o registro (log) deverá ser armazenado em arquivos de texto . • Deverá ser mostrado de forma individual a quantidade de acessos de cada uma das 3 páginas criadas ( inicio”, “sobre” e “contato” ). • Deverá ser mostrado o total de acessos das 3 páginas; • A quantidade de acessos de cada página deverá ser ordenada do maior para o menor (ordem decrescente); • Deverá ser mostrado o registro (log) de acesso de todas as páginas; • Na página de Logs de Acesso deverá existir uma opção para remover os dados de acesso (contagem de acessos); • Na página de Logs de Acesso deverá existir uma opção para remover o registro (log, arquivo com todos os acessos); • Ambas as opções de remover logs e contagem deverão ter confirmações; • No rodapé da página coloque seu nome e email de contato. Quaisquer outras dúvidas não explicadas aqui podem ser esclarecidas entrando em contato comigo. Prof. Dr. Eder Pansani epansani@gmail.com / epansani@ifsp.edu.br"
+    }
+  ]
+}
