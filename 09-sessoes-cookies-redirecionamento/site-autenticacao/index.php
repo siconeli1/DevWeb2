@@ -11,7 +11,7 @@ $usuario = usuario_atual();
 require __DIR__ . '/includes/header.php';
 ?>
       <section class="hero-panel">
-        <h1>Praticando da Aula 8</h1>
+        <h1>Praticando Aula 9</h1>
       </section>
 
       <?php if ($flash !== null && $flash['mensagem'] !== ''): ?>

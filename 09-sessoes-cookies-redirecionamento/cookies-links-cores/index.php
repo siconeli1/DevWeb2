@@ -62,9 +62,15 @@ function link_com_parametros(array $parametros): string
 }
 
 $coresPermitidas = [
-    'lightcoral' => '#FF0000',
-    'lightgreen' => '#00FF00',
-    'lightblue' => '#0000FF',
+    'vermelho' => '#dc2626',
+    'verde' => '#22c55e',
+    'azul' => '#2563eb',
+];
+
+$aliasesCores = [
+    'lightcoral' => 'vermelho',
+    'lightgreen' => 'verde',
+    'lightblue' => 'azul',
 ];
 
 if (isset($_GET['limpar'])) {
@@ -89,6 +95,10 @@ if ($emailRecebido !== '' && filter_var($emailRecebido, FILTER_VALIDATE_EMAIL) !
 }
 
 $corRecebida = ler_query('cor');
+if ($corRecebida !== '' && array_key_exists($corRecebida, $aliasesCores)) {
+    $corRecebida = $aliasesCores[$corRecebida];
+}
+
 if ($corRecebida !== '' && array_key_exists($corRecebida, $coresPermitidas)) {
     salvar_cookie('cor', $corRecebida);
     $houveAtualizacao = true;
@@ -101,8 +111,14 @@ if ($houveAtualizacao) {
 $nome = ler_cookie('nome');
 $email = ler_cookie('email');
 $cor = ler_cookie('cor');
+
+if ($cor !== '' && array_key_exists($cor, $aliasesCores)) {
+    $cor = $aliasesCores[$cor];
+    salvar_cookie('cor', $cor);
+}
+
 $corValida = array_key_exists($cor, $coresPermitidas) ? $cor : '';
-$corFundo = $corValida !== '' ? $corValida : '#efefef';
+$corFundo = $corValida !== '' ? $coresPermitidas[$corValida] : '#efefef';
 $mostrarNome = $nome !== '';
 $mostrarEmail = $email !== '';
 $mostrarInformacoes = $mostrarNome || $mostrarEmail;
@@ -122,9 +138,9 @@ $linkCaio = link_com_parametros(array_merge(
     $parametrosPessoa
 ));
 
-$linkRed = link_com_parametros(['cor' => 'lightcoral']);
-$linkGreen = link_com_parametros(['cor' => 'lightgreen']);
-$linkBlue = link_com_parametros(['cor' => 'lightblue']);
+$linkRed = link_com_parametros(['cor' => 'vermelho']);
+$linkGreen = link_com_parametros(['cor' => 'verde']);
+$linkBlue = link_com_parametros(['cor' => 'azul']);
 $linkLimpar = link_com_parametros(['limpar' => '1']);
 ?>
 <!DOCTYPE html>
@@ -205,15 +221,15 @@ $linkLimpar = link_com_parametros(['limpar' => '1']);
     }
 
     .red {
-      background: #ff0000;
+      background: #dc2626;
     }
 
     .green {
-      background: #00ff00;
+      background: #22c55e;
     }
 
     .blue {
-      background: #0000ff;
+      background: #2563eb;
     }
 
     .hint-box {
@@ -275,9 +291,9 @@ $linkLimpar = link_com_parametros(['limpar' => '1']);
   </div>
 
   <div class="cards">
-    <a class="card red" href="<?= escapar($linkRed) ?>">Red<br>#FF0000</a>
-    <a class="card green" href="<?= escapar($linkGreen) ?>">Green<br>#00FF00</a>
-    <a class="card blue" href="<?= escapar($linkBlue) ?>">Blue<br>#0000FF</a>
+    <a class="card red" href="<?= escapar($linkRed) ?>">Vermelho<br>#DC2626</a>
+    <a class="card green" href="<?= escapar($linkGreen) ?>">Verde<br>#22C55E</a>
+    <a class="card blue" href="<?= escapar($linkBlue) ?>">Azul<br>#2563EB</a>
   </div>
 </body>
 </html>
